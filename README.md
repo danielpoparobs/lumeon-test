@@ -25,6 +25,9 @@ Please answer the following question textually.
 
 The file web/showhospitalpatients.php is intended to retrieve a list of patients for a given hospital and return that in json format. Are there any comments you would like to make? What could be improved about the code ?
 
+#### My Answer
+The function should be placed in a controller, it should have a defined route and method. It should accept an instace of a HttpFoundation\Request. It's functioning relies on providing a hospitalId through the request. If the hospital is no found in the hospitaRepository the function should return a response with a msg => 'No hospital information found', as you can not find any patients if you don't have a hospital. The patients of a given hospital could also be retrieved through a relation defined between the Patient and Hospital entities.
+
 #### Exercise
 
 This is the coding portion of the test. Please write code as well as you can using existing entities/repositories where appropriate and adding classes/files where needed.
