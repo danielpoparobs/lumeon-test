@@ -1,0 +1,10 @@
+<phpunit bootstrap="..\..\..\vendor\autoload.php">
+    <php>
+        <server name="KERNEL_DIR" value="..\..\..\app\" />
+    </php>
+    <testsuites>
+        <testsuite name="Controller">
+            <directory>Controller/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
